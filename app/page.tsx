@@ -10,6 +10,14 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
+import {
+  Glimpse,
+  GlimpseContent,
+  GlimpseDescription,
+  GlimpseImage,
+  GlimpseTitle,
+  GlimpseTrigger,
+} from '@/components/kibo-ui/glimpse'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
@@ -137,8 +145,34 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Focused on building{' '}
+            <Glimpse openDelay={100} closeDelay={0}>
+              <GlimpseTrigger asChild>
+                <a
+                  className="font-medium text-zinc-900 dark:text-zinc-100 underline decoration-zinc-400 dark:decoration-zinc-600 underline-offset-2 hover:decoration-zinc-600 dark:hover:decoration-zinc-400 transition-colors"
+                  href="https://www.flowleap.co"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Flow Leap
+                </a>
+              </GlimpseTrigger>
+              <GlimpseContent className="w-80 bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                <GlimpseImage
+                  className="shadow-lg"
+                  src="/flowleap-og.jpg"
+                  alt="Flow Leap"
+                />
+                <GlimpseTitle className="line-clamp-2 font-semibold text-lg text-zinc-900 dark:text-zinc-100">
+                  Flow Leap
+                </GlimpseTitle>
+                <GlimpseDescription className="text-sm text-zinc-600 dark:text-zinc-400">
+                  The First Patent AI Agent. Bridging AI and intellectual property solutions.
+                </GlimpseDescription>
+              </GlimpseContent>
+            </Glimpse>
+            , The First patent AI agent. Bridging the gap between AI and
+            intellectual property solutions.
           </p>
         </div>
       </motion.section>

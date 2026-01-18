@@ -1,4 +1,4 @@
-# Nim - Installation Guide
+# abodi-website - Installation Guide
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@
 
    ```bash
    git clone https://github.com/ibelick/nim.git
-   cd nim
+   cd abodi-website
    ```
 
 2. **Install dependencies**
